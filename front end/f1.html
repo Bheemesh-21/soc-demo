@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alex Smith | Web Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root {
+      --primary: #3c3b6e;
+      --accent: #227e5f;
+      --bg: #f9f9f9;
+      --text: #333333;
+      --card: #fff;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    header p {
+      margin: 0.5rem 0 0;
+      font-weight: 300;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+    }
+
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      background: var(--card);
+      box-shadow: var(--shadow);
+      border-radius: 10px;
+      padding: 2rem;
+      align-items: center;
+    }
+
+    .about img {
+      width: 160px;
+      border-radius: 50%;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .skill {
+      background: var(--card);
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      font-weight: 600;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+    }
+    .skill:hover {
+        transform: translateY(-5px) scale(1.05);
+        background: var(--accent);
+        color: #0b0e07;
+
+    }
+
+    .projects {
+      display: grid;
+      grid-template-rows: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project {
+      background: var(--card);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+    }
+
+    .project img {
+      width: 100%;
+      height: 60px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 1rem;
+      flex: 1;
+    }
+
+    .project h3 {
+      margin: 0 0 0.5rem;
+      color: var(--primary);
+    }
+
+    .project p {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .project a {
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    form {
+      background: var(--card);
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      max-width: 500px;
+      margin: auto;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      background: var(--primary);
+      color: #fff;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background: var(--accent);
+    }
+
+    footer {
+      background: var(--primary);
+      color: #fff;
+      text-align: right;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 700px) {
+      .about {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Alex Smith</h1>
+    <p>Web Developer | UI Designer</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- About -->
+    <section id="about">
+      <h2 class="section-title">Who Am I?</h2>
+      <div class="about">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Alex Smith"/>
+        <div class="about-text">
+          <p>Hello! I'm Alex, a creative front-end web developer with a love for clean code and intuitive designs. With experience in building dynamic user experiences, I'm always looking for new challenges and technologies.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2 class="section-title">Tech Stack</h2>
+      <div class="skills">
+        <div class="skill"> HTML5</div>
+        <div class="skill"> CSS3</div>
+        <div class="skill"> JavaScript</div>
+        <div class="skill"> React</div>
+        <div class="skill"> Node.js</div>
+        <div class="skill"> Sass</div>
+        <div class="skill"> Git</div>
+        <div class="skill"></i> Figma</div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2 class="section-title">Recent Work</h2>
+      <div class="projects">
+        <div class="project">
+          <img src="https://source.unsplash.com/400x300/?website" alt="Project 1"/>
+          <div class="project-content">
+            <h3>Creative Portfolio</h3>
+            <p>A React-based portfolio site with animated sections and interactive components.</p>
+            <a href="#">View Site</a>
+          </div>
+        </div>
+        <div class="project">
+          <img src="https://source.unsplash.com/400x300/?dashboard" alt="Project 2"/>
+          <div class="project-content">
+            <h3>Admin Dashboard</h3>
+            <p>Built with React and Chart.js for visual analytics. Responsive and theme-supported.</p>
+            <a href="#">Live Demo</a>
+          </div>
+        </div>
+        <div class="project">
+          <img src="https://source.unsplash.com/400x300/?app,technology" alt="Project 3"/>
+          <div class="project-content">
+            <h3>Note Taking App</h3>
+            <p>A minimal app using Express and MongoDB, with user login and mobile-friendly UI.</p>
+            <a href="#">Check It Out</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact -->
+     <from>
+    <section id="contact">
+      <h2 class="section-title">
+        <label for="email">Email:</label><br>
+        <input type="email" name="email" id="email"><br>
+        <label for="message">Messaage:</label><br>
+        <textarea id="message" name="message" rows="5" cols="50" required ></textarea><br>
+        <input type="submit" value="Submit">
+
+        </form>
+
